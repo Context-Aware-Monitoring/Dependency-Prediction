@@ -294,6 +294,9 @@ def saveData(overlapping, pathToTraces, ds):
 
 
 def main(windowSize=60, overlapping=0):
+    assert 0 < windowSize < 28282
+    assert 0 <= overlapping < 1
+
     relativePathToData = 'data/sequential_data'
     pathToData = pathlib.Path().absolute().parent / relativePathToData
     pathToTraces = pathToData / 'traces'
